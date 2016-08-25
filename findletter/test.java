@@ -1,10 +1,11 @@
-/**
- * Created by Sergeevs Family on 08.08.2016.
- */
 public class test {
-    public static void findlet(String line, String letter) {
-        int a = line.length();
-        int b = line.replaceAll(letter, "").length();
-        System.out.println("В предложении: " + line + " буква " + letter + " встречается - " + (a - b) + " раз");
+    public static int count(String line, char letter) {
+        int kol = 0;
+        for (int i = 0; i < line.length(); i++) {
+            if (line.charAt(i) == letter) kol++;
+        }
+        System.out.println("В предложении: " + line + " буква " + letter + " встречается - " + kol + " раз");
+        return kol;
     }
 }
+
